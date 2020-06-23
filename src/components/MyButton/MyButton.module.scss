@@ -1,0 +1,24 @@
+.btn {
+  margin-left: 10px;
+  padding: 5px;
+  outline: none;
+  transition: linear 0.3s;
+  &_default {
+    border: 2px #436dab solid;
+    background-color: #bf9ed0;
+    &:hover {
+      background-color:#4a58bd;
+      color: #eee;
+    }
+  }
+  &_secondary {
+    border: 2px #3c3131 solid;
+    background-color: #d67f89;
+    &:hover {
+      background-color:#d67f89;
+      color: #eee;
+      border: 2px darkred solid;
+    }
+  }
+
+}

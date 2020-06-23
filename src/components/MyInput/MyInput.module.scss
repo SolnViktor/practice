@@ -1,0 +1,13 @@
+.input {
+    padding: 5px;
+    border: 2px solid #436dab;
+    color: #436dab;
+    outline: none;
+    &_error {
+        border-color: darkred;
+    }
+}
+.error_message {
+    color: darkred;
+    font-weight: bold;
+}

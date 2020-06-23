@@ -1,0 +1,37 @@
+.message {
+    display: flex;
+}
+.message_ava {
+    align-self: flex-end;
+}
+
+.message_container {
+    background: url(../../accets/chat-window.png) no-repeat;
+    background-size: cover;
+    padding: 15px;
+    height: 280px;
+    width: 350px;
+}
+
+.message_content {
+    position: relative;
+    height: 73%;
+}
+
+.name {
+    color: saddlebrown;
+    height: 10%;
+}
+
+.date {
+    position: absolute;
+    height: 10%;
+    right: 10px;
+
+}
+
+.text {
+    padding: 5px 0;
+    height: 75%;
+    color: seagreen;
+}
