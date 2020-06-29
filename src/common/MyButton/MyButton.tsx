@@ -2,11 +2,10 @@ import React, {ButtonHTMLAttributes, DetailedHTMLProps} from 'react'
 import styles from './MyButton.module.scss'
 
 
-export type ButtonNyaPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 
 export type MyButtonType = {
     btnName: string
-    onClick: () => void
+    onClick: (id?: any) => void // id: string ??
     style?: 'default' | 'secondary'
 }
 

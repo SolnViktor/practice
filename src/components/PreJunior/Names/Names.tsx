@@ -1,8 +1,8 @@
 import styles from "./Names.module.scss";
-import React, {ChangeEvent, KeyboardEvent, useState} from "react";
+import React, {ChangeEvent, KeyboardEvent, useEffect, useState} from 'react';
 import {v1} from "uuid";
-import {MyButton} from "../MyButton/MyButton";
-import {MyInput} from "../MyInput/MyInput";
+import {MyButton} from "../../../common/MyButton/MyButton";
+import {MyInput} from "../../../common/MyInput/MyInput";
 
 
 export function Names() {
@@ -11,9 +11,12 @@ export function Names() {
         name: string
     }
 
+
+
     const [inputValue, setInputValue] = useState('')
-    const [names, setNames] = useState <any>([])
-    const [error, setError] = useState <any>(null)
+    const [names, setNames] = useState <NamesType[]>([])
+    const [error, setError] = useState <string | null>(null)
+    const [namesCount, setNamesCount] = useState <number>(0)
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setInputValue(e.currentTarget.value)
@@ -25,6 +28,9 @@ export function Names() {
     const onClickHandler = () => {
         onClickOnKeyPressSettings()
     }
+    useEffect( () => {
+        setNamesCount(names.length)
+    }, [names])
 
     const onClickOnKeyPressSettings = () => {
         const resultValue = inputValue.trim()
@@ -38,7 +44,7 @@ export function Names() {
         }
     }
 
-    const mappedNames = names.map( (item:any) => <li>{item.name}</li>)
+    const mappedNames = names.map( (item:NamesType) => <li>{item.name}</li>)
 
     return (
         <div className={styles.container}>
@@ -50,12 +56,15 @@ export function Names() {
                          error={error}
                 />
                 <MyButton btnName={'Отправить'} onClick={onClickHandler} style={'default'}/>
+                <span className={styles.names_title}>Текущее количество имен: </span>
+                <span className={styles.names_count}>{namesCount}</span>
             </div>
             <div>
                 <ol>
                     {names.length > 0 && mappedNames}
                 </ol>
             </div>
+
         </div>
     );
 }

@@ -1,0 +1,24 @@
+.container {
+  margin: 0 50px;
+
+  .nav_item {
+    font-size: 20px;
+    font-weight: bold;
+    list-style-type: none;
+    color: #436dab;
+    display: inline-block;
+    padding: 10px 20px;
+
+    a {
+      color: #436dab;
+    }
+
+    a:hover {
+      color: #fff
+    }
+
+    a.active {
+      color: #b3a664;
+    }
+  }
+}
