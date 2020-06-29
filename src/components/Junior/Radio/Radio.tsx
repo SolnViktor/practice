@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, ChangeEvent} from 'react'
 import styles from './Radio.module.scss'
 import {MyRadio} from '../../../common/MyRadio/MyRadio';
 
@@ -6,7 +6,7 @@ import {MyRadio} from '../../../common/MyRadio/MyRadio';
 export function Radio() {
     let cars = ['BMW', 'Priora', 'Ferrari', 'Kia', 'Lexus']
     let [radioValue, setRadioValue] = useState('')
-    let onChangeRadioHandler = (e: string) => {
+    let onChangeRadioHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setRadioValue(e.currentTarget.value)
     }
     return (

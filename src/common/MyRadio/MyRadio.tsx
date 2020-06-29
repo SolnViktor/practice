@@ -1,10 +1,10 @@
-import React from 'react'
+import React, {ChangeEvent} from 'react'
 import styles from './MyRadio.module.scss'
 
 type MyRadioTypes = {
     itemsList: string[]
     name: string
-    onChange: (e:string) => void
+    onChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
 export function MyRadio(props: MyRadioTypes) {
 
