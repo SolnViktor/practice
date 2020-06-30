@@ -4,7 +4,7 @@ import {Select} from './Select/Select';
 import {Radio} from './Radio/Radio';
 import {Phones} from './Phones/Phones';
 import {Users} from './Users/Users';
-import {CheckDate} from './Date/Date';
+import {DateContainer} from './Date/Date';
 
 
 export function Junior() {
@@ -22,7 +22,7 @@ export function Junior() {
             <Radio />
             <Phones />
             <Users />
-            <CheckDate />
+            <DateContainer />
         </div>
     )
 }

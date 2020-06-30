@@ -41,7 +41,7 @@ export function Films() {
             <div>Favorit films:</div>
             <div>
                 <ol>
-                    {films.map((f, index) =>
+                    {films.map((f) =>
                         <li key={f.id}>
                             <EditableSpan value={f.name} updateTitle={updateFilmName} id={f.id}/>
                         </li>
