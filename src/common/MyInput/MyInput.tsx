@@ -16,8 +16,6 @@ export type MyInputType = {
 export function MyInput (props: MyInputType) {
 
 
-
-
     return (
         <>
             {props.error ? <div className={styles.error_message}>{props.error}</div> : null}

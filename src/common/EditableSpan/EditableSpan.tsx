@@ -4,7 +4,7 @@ import styles from './EditableSpan.module.scss'
 
 type EditableSpanType = {
     value: string
-    updateFilmName: (e:string, id:number) => void
+    updateTitle: (e:string, id:number) => void
     id: number
 }
 
@@ -19,7 +19,7 @@ export function EditableSpan(props: EditableSpanType) {
         setIsEditMode(false)
     }
     const onChangeHandler = (e:ChangeEvent<HTMLInputElement>) => {
-        props.updateFilmName(e.currentTarget.value, props.id)
+        props.updateTitle(e.currentTarget.value, props.id)
     }
     return (
         <>

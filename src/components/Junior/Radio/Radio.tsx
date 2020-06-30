@@ -13,7 +13,6 @@ export function Radio() {
         <div className={styles.container}>
             <MyRadio itemsList={cars} name={'Car'} onChange={onChangeRadioHandler}/>
             <span>Your car: {radioValue}</span>
-
         </div>
     )
 }

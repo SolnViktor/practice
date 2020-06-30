@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {EditableSpan} from '../../../common/EditableSpan/EditableSpan';
 import {MyButton} from '../../../common/MyButton/MyButton';
 import styles from './Films.module.scss'
+import { saveState, restoreState } from '../../../common/helpers';
 
 type FilmType = {id: number, name:string}
 
@@ -23,16 +24,12 @@ export function Films() {
         })
         setFilms(copyFilms)
     }
+
     const saveFilms = () => {
-        let filmsAsString = JSON.stringify(films)
-        localStorage.setItem('films', filmsAsString)
+        saveState('films', films)
     }
     const loadFilms = () => {
-        let filmsAsString = localStorage.getItem('films')
-        if(filmsAsString !== null) {
-            let defaultFilms = JSON.parse(filmsAsString)
-            setFilms(defaultFilms)
-        }
+        setFilms(restoreState('films', films))
     }
 
     return (
@@ -46,7 +43,7 @@ export function Films() {
                 <ol>
                     {films.map((f, index) =>
                         <li key={f.id}>
-                            <EditableSpan value={f.name} updateFilmName={updateFilmName} id={f.id}/>
+                            <EditableSpan value={f.name} updateTitle={updateFilmName} id={f.id}/>
                         </li>
                     )}
                 </ol>
