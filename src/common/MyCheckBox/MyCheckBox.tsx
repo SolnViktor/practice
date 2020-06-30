@@ -1,4 +1,4 @@
-import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from 'react'
+import React, {ChangeEvent} from 'react'
 import styles from './MyCheckBox.module.scss'
 import {PhonesType} from '../../components/Junior/Phones/Phones';
 import {EditableSpan} from '../EditableSpan/EditableSpan';

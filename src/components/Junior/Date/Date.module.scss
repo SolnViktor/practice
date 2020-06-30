@@ -1,0 +1,21 @@
+.container {
+    margin-top: 10px;
+    padding-bottom: 50px;
+    .currentTime {
+        position: absolute;
+        top: 100px;
+        right: 50px;
+        font-weight: bold;
+        .date {
+            font-size: 14px;
+            font-weight: lighter;
+            position: relative;
+            bottom: 25px;
+            left: 25px;
+            padding: 3px;
+            border: 1px solid black;
+            background-color: rgba(90, 88, 88, 0.5);
+        }
+    }
+
+}

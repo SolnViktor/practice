@@ -1,10 +1,8 @@
-import React, {ChangeEvent, useState} from 'react'
-import {EditableSpan} from '../../../common/EditableSpan/EditableSpan';
+import React, {useState} from 'react'
 import {MyButton} from '../../../common/MyButton/MyButton';
 import styles from './Phones.module.scss'
 import {saveState, restoreState} from '../../../common/helpers';
 import {MyCheckbox} from '../../../common/MyCheckBox/MyCheckBox';
-import {MyRadio} from '../../../common/MyRadio/MyRadio';
 
 export type PhonesType = {id:number, brand: string, isChecked: boolean}
 
@@ -43,8 +41,8 @@ export function Phones() {
     return (
         <div className={styles.container}>
             <div>
-                <MyButton btnName={'Save'} onClick={saveFilms} style={'default'}/>
-                <MyButton btnName={'Load'} onClick={loadFilms} style={'secondary'}/>
+                <MyButton btnName={'Save'} onClick={saveFilms} styled={'default'}/>
+                <MyButton btnName={'Load'} onClick={loadFilms} styled={'secondary'}/>
             </div>
             <div>
                 <MyCheckbox name={'phone'} itemsList={phones} onChange={onChangeCheckboxHandler}

@@ -1,5 +1,5 @@
 import styles from "./Cases.module.scss";
-import React, {ChangeEvent, useEffect, useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import {v1} from "uuid";
 import {MyButton} from '../../../common/MyButton/MyButton';
 
@@ -23,13 +23,13 @@ export function Cases() {
         .filter(item => {
             if(priority === 'All') {
                 return item
-            } else if (item.priority === priority){
+            } else if (priority === item.priority){
                 return item
             }
         })
         .map(item =>
             <li key={item.id} className={styles.li_item}>{item.thing}
-            <MyButton btnName={'Delete'} style={'secondary'}
+            <MyButton btnName={'Delete'} styled={'secondary'}
                       onClick={ () => onClickDeleteThing(item.id)} />
             </li>)
 
@@ -45,7 +45,7 @@ export function Cases() {
                     <option value="All">All</option>
                     <option value="Low">Low</option>
                     <option value="Middle">Middle</option>
-                    <option value="Hight">Hight</option>
+                    <option value="Height">Height</option>
                 </select>
             </div>
             <div>

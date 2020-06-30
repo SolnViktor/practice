@@ -3,6 +3,8 @@ import {Films} from './Films/Films'
 import {Select} from './Select/Select';
 import {Radio} from './Radio/Radio';
 import {Phones} from './Phones/Phones';
+import {Users} from './Users/Users';
+import {CheckDate} from './Date/Date';
 
 
 export function Junior() {
@@ -19,6 +21,8 @@ export function Junior() {
             <Select value={game} onChange={onChangeHandler} favoriteGames={favoriteGames}/>
             <Radio />
             <Phones />
+            <Users />
+            <CheckDate />
         </div>
     )
 }

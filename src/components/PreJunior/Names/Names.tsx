@@ -55,7 +55,7 @@ export function Names() {
                          value={inputValue}
                          error={error}
                 />
-                <MyButton btnName={'Отправить'} onClick={onClickHandler} style={'default'}/>
+                <MyButton btnName={'Отправить'} onClick={onClickHandler} styled={'default'}/>
                 <span className={styles.names_title}>Текущее количество имен: </span>
                 <span className={styles.names_count}>{namesCount}</span>
             </div>

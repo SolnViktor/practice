@@ -1,5 +1,4 @@
 import React, {useState, ChangeEvent} from 'react'
-import styles from './EditableSpan.module.scss'
 
 
 type EditableSpanType = {

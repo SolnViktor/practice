@@ -35,8 +35,8 @@ export function Films() {
     return (
         <div className={styles.container}>
             <div>
-                <MyButton btnName={'Save'} onClick={saveFilms} style={'default'}/>
-                <MyButton btnName={'Load'} onClick={loadFilms} style={'secondary'}/>
+                <MyButton btnName={'Save'} onClick={saveFilms} styled='default'/>
+                <MyButton btnName={'Load'} onClick={loadFilms} styled='secondary'/>
             </div>
             <div>Favorit films:</div>
             <div>
